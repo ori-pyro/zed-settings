@@ -1,0 +1,92 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-shift-f10": ["task::Spawn", { "task_name": "Run С++/Python" }],
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-shift-f9": [
+        "task::Spawn",
+        {
+          "task_name": "C++23: Build"
+        }
+      ],
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-shift-f11": [
+        "task::Spawn",
+        {
+          "task_name": "Run with input.txt"
+        }
+      ],
+    },
+  },
+
+  {
+    "unbind": {
+      "f9": "debugger::Continue",
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "f9": "editor::ToggleBreakpoint",
+    },
+  },
+  {
+    "context": "Terminal",
+    "unbind": {
+      "ctrl-alt-r": "terminal::RerunTask",
+    },
+  },
+  {
+    "context": "ProjectPanel",
+    "unbind": {
+      "ctrl-alt-r": "project_panel::RevealInFileManager",
+    },
+  },
+  {
+    "context": "OutlinePanel && not_editing",
+    "unbind": {
+      "ctrl-alt-r": "outline_panel::RevealInFileManager",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-b": "editor::GoToTypeDefinition"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-shift-b": "editor::GoToTypeDefinition"
+    }
+  }
+]

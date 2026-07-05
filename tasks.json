@@ -1,0 +1,27 @@
+[
+  {
+    "label": "C++23: Build",
+    "command": "cd \"$ZED_DIRNAME\"; g++ -std=c++23 \"$ZED_FILENAME\" -o \"$ZED_STEM.exe\"",
+    "use_new_terminal": true,
+    "reveal": "always",
+  },
+  {
+    "label": "Run С++/Python",
+    "command": "cd \"$ZED_DIRNAME\"; if (\"$ZED_FILE\" -match '\\.cpp$') { if (Test-Path \"$ZED_STEM.exe\") { .\\\"$ZED_STEM.exe\" } else { echo \"Error: EXE not found. Run 'C++23: Build' first.\" } } elseif (\"$ZED_FILE\" -match '\\.py$') { python \"$ZED_FILENAME\" } else { echo \"Unsupported file type\" }",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+  },
+  {
+    "label": "Run with input.txt",
+    "command": "cd \"$ZED_DIRNAME\"; if (Test-Path \"input.txt\") { echo \"----- input.txt -----\"; Get-Content \"input.txt\"; echo \"---------------------\"; if (\"$ZED_FILE\" -match '\\.cpp$') { if (Test-Path \"$ZED_STEM.exe\") { Get-Content \"input.txt\" | .\\\"$ZED_STEM.exe\" } else { echo \"Error: EXE not found. Build first.\" } } elseif (\"$ZED_FILE\" -match '\\.py$') { Get-Content \"input.txt\" | python \"$ZED_FILENAME\" } } else { echo \"Error: input.txt not found in $ZED_DIRNAME\" }",
+    "use_new_terminal": true,
+    "reveal": "always",
+  },
+  {
+    "label": "open preview in sioyek",
+    "command": "cd \"$ZED_DIRNAME\"; Start-Process sioyek -ArgumentList \"$ZED_STEM.pdf\" ",
+    "use_new_terminal": true,
+    "reveal": "always",
+  },
+]
