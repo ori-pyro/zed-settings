@@ -1,0 +1,80 @@
+{
+  "agent_servers": {
+    "github-copilot-cli": {
+      "type": "registry"
+    }
+  },
+  "show_edit_predictions": false,
+  "edit_predictions": {
+    "mode": "eager",
+    "provider": "zed",
+  },
+  "agent": {
+    "play_sound_when_agent_done": "always",
+    "sidebar_side": "right",
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "cli_default_open_behavior": "existing_window",
+  "diff_view_style": "split",
+  "show_whitespaces": "selection",
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "terminal": {
+    "dock": "bottom",
+  },
+  "ui_font_weight": 500.0,
+  "agent_ui_font_size": 18.0,
+  "ui_font_family": "Inter",
+  "buffer_font_family": "JetBrains Mono",
+  "icon_theme": "Zed (Default)",
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "base_keymap": "JetBrains",
+  "ui_font_size": 16.0,
+  "buffer_font_size": 15.0,
+  "theme": "Catppuccin Macchiato",
+  "lsp": {
+    "tinymist": {
+      "settings": {
+        "preview": {
+          "host": "127.0.0.1",
+          "port": 9000,
+        },
+        "previewServer": "on",
+        "exportPdf": "onSave",
+        "outputPath": "$root/$dir/$name",
+      },
+    },
+    "clangd": {
+      "binary": {
+        "arguments": [
+          "--header-insertion=never",
+          "--query-driver=C:/msys64/mingw64/bin/g++.exe",
+          "--background-index",
+          "--clang-tidy",
+        ],
+      },
+      "initialization_options": {
+        "fallbackFlags": [
+          "-std=c++23",
+          "-I/msys64/mingw64/include/c++/15.2.0",
+          "-I/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32",
+          "-I/msys64/mingw64/include",
+        ],
+      },
+    },
+  },
+}
